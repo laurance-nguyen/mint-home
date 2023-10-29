@@ -1,7 +1,18 @@
-import Image from "next/image";
+import Contact from "@/components/Contact";
+import Hero from "@/components/Hero";
 
-import Header from "@/components/Header";
+import AboutSection from "./AboutSection";
+import CustomerSection from "./CustomerSection";
+import ProjectSection from "./ProjectSection";
 
 export default function Home() {
-  return <main>Main</main>;
+  return (
+    <main>
+      <Hero />
+      <AboutSection />
+      <ProjectSection />
+      <CustomerSection />
+      <Contact />
+    </main>
+  );
 }

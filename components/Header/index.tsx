@@ -25,13 +25,13 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex justify-between items-center py-3 px-4 sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="flex justify-between items-center py-3 px-4 sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Image width={164} height={35} src="/logo.svg" alt="logo" />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <HamburgerMenuIcon height={30} width={30} />
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-40">
+        <DropdownMenuContent align="end" className="w-52">
           {MENU_ITEMS.map((item) => (
             <DropdownMenuItem
               onSelect={() => {
