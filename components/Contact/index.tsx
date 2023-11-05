@@ -1,7 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -15,8 +14,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
-import BlurryDivider from "../BlurryDivider";
 
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
@@ -127,30 +124,6 @@ const Contact = () => {
           </Button>
         </form>
       </Form>
-
-      <div className="mb-5 flex w-full flex-col gap-1">
-        <Image width={164} height={35} src="/logo.svg" alt="logo" />
-        <p className="text-2xs tracking-widest text-primary">
-          PASSION IN HOME DECOR
-        </p>
-      </div>
-
-      <div className="flex w-full flex-col gap-4 text-sm text-muted-foreground mb-10">
-        <div>
-          <p>+84 369 369 369</p>
-          <p>+84 369 369 369</p>
-        </div>
-        <p>info@minthome.com</p>
-        <p>
-          Ha Huy Giap, Thanh Loc, Quan 12
-          <br /> Thanh pho Ho Chi Minh
-        </p>
-      </div>
-
-      <BlurryDivider />
-      <p className="py-4 text-xs text-accent-foreground">
-        ©minthome 2023. All Rights Reserved
-      </p>
     </div>
   );
 };

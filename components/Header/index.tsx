@@ -5,20 +5,14 @@ import Image from 'next/image';
 import { usePathname,useRouter } from 'next/navigation'
 import React from 'react';
 
+import { MENU_ITEMS } from '@/lib/constants';
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
-
-const MENU_ITEMS = [
-  { key: 'home', label: 'Trang chủ', pathname: '/' },
-  { key: 'about', label: 'Giới thiệu', pathname: '/about' },
-  { key: 'project', label: 'Dự án', pathname: '/project' },
-  { key: 'blog', label: 'Blog', pathname: '/blog' },
-  { key: 'process', label: 'Quy trình thiết kế', pathname: '/process' },
-];
 
 const Header = () => {
   const router = useRouter();

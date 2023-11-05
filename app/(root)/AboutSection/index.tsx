@@ -1,11 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const SPECIALIZATION_ITEMS = [
-  { key: "architecture", label: "ARCHITECTURE", icon: "/architecture.svg" },
-  { key: "interior", label: "INTERIOR", icon: "/interior.svg" },
-  { key: "planning", label: "FURNITURE", icon: "/planning.svg" },
-];
+import { SPECIALIZATION_ITEMS } from "@/lib/constants";
 
 const AboutSection = () => {
   return (
