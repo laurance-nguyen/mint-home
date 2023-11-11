@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import BackdropTitle from "@/components/BackdropTitle";
-import Contact from "@/components/Contact";
+import Contact from "@/components/ContactForm";
 import { SPECIALIZATION_ITEMS } from "@/lib/constants";
 
 export default function AboutPage() {

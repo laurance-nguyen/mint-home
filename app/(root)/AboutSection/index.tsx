@@ -43,7 +43,7 @@ const AboutSection = () => {
 
         <Image
           className="aspect-square object-cover"
-          src="/images/kitchen-1.jpg"
+          src="/images/minthome-14.jpg"
           alt="kitchen"
           width={1280}
           height={720}

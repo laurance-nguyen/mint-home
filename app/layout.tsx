@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Header />
         {children}
-        <div className='px-6'>
+        <div className='px-6 mt-10'>
           <div className="mb-5 flex w-full flex-col gap-1">
             <Image width={164} height={35} src="/logo.svg" alt="logo" />
             <p className="text-2xs tracking-widest text-primary">

@@ -50,7 +50,7 @@ const Contact = () => {
       </h1>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="mb-14">
+        <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="grid grid-cols-2 gap-2">
             <FormField
               control={form.control}
