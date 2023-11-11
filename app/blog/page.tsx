@@ -1,7 +1,7 @@
 import React from "react";
 
 import BackdropTitle from "@/components/BackdropTitle";
-import Contact from "@/components/Contact";
+import Contact from "@/components/ContactForm";
 
 export default function BlogPage() {
   return (

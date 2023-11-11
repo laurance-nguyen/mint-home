@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative h-[746px] w-full">
       <Image
         className="h-full object-cover object-[70%]"
-        src="/images/living-room-1.jpg"
+        src="/images/minthome-15.jpg"
         height={720}
         width={1280}
         alt="img"

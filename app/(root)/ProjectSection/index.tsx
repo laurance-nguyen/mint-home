@@ -10,8 +10,13 @@ const ProjectSection = () => {
         <span className="text-primary">DỰ ÁN</span> CỦA CHÚNG TÔI
       </h1>
 
-      <ProjectCard image="/images/living-room-1.jpg" title="FROZEN HOUSE" />
-      <ProjectCard image="/images/living-room-1.jpg" title="FROZEN HOUSE" />
+      <ProjectCard image="/images/pool-1.jpg">
+        <h1 className="text-4xl font-bold">FROZEN HOUSE</h1>
+        {/* {desc ? <p className="text-xl">{desc}</p> : null} */}
+      </ProjectCard>
+      <ProjectCard image="/images/minthome-12.jpg">
+        <h1 className="text-4xl font-bold">MINT HOUSE</h1>
+      </ProjectCard>
     </div>
   );
 };
