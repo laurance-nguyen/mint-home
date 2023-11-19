@@ -6,9 +6,9 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative h-[746px] w-full">
+    <div className="relative h-[746px] sm:h-auto w-full">
       <Image
-        className="h-full object-cover object-[70%]"
+        className="h-full w-full object-cover object-[70%]"
         src="/images/minthome-15.jpg"
         height={720}
         width={1280}

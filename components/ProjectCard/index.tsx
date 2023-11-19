@@ -11,7 +11,7 @@ const ProjectCard = ({ image, onClick, children }: ProjectCardProps) => {
   return (
     <div className="relative h-[746px] w-full" onClick={onClick}>
       <Image
-        className="h-full object-cover object-[70%]"
+        className="w-full h-full object-cover object-[70%]"
         src={image}
         height={720}
         width={1280}

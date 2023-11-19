@@ -9,7 +9,7 @@ const BackdropTitle = ({ title }: BackdropTitleProps) => {
   return (
     <div className="relative w-full">
       <Image
-        className="h-full aspect-square object-cover"
+        className="h-full w-full aspect-square sm:aspect-video object-cover"
         src="/images/pool-1.jpg"
         height={720}
         width={1280}
