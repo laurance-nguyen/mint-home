@@ -5,7 +5,7 @@ import AboutSection from "./AboutSection";
 import CustomerSection from "./CustomerSection";
 import ProjectSection from "./ProjectSection";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Hero />

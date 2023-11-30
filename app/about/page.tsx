@@ -7,10 +7,10 @@ import { SPECIALIZATION_ITEMS } from "@/lib/constants";
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col gap-10">
+    <main className="flex flex-col items-center gap-10">
       <BackdropTitle title="GIỚI THIỆU" />
 
-      <div className="flex flex-col gap-8 px-6">
+      <div className="flex max-w-2xl flex-col gap-8 px-6">
         <h1 className="text-4xl font-medium">
           we turn ideas into works of art.
         </h1>
@@ -26,17 +26,19 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-8 px-6">
+      <div className="flex max-w-3xl flex-col gap-8 px-6">
         <h1 className="py-6 text-center text-2xl">
-          <span className="text-primary">DICH VU</span> CUA CHÚNG TÔI
+          <span className="text-primary">DỊCH VỤ</span> CỦA CHÚNG TÔI
         </h1>
-        {SPECIALIZATION_ITEMS.map((item) => (
-          <div key={item.key} className="flex flex-col gap-2 text-sm">
-            <Image src={item.icon} height={58} width={68} alt={item.key} />
-            <p className="font-semibold">{item.label}</p>
-            <p>{item.content}</p>
-          </div>
-        ))}
+        <div className="flex flex-col gap-8 sm:flex-row">
+          {SPECIALIZATION_ITEMS.map((item) => (
+            <div key={item.key} className="flex flex-col gap-2 text-sm">
+              <Image src={item.icon} height={58} width={68} alt={item.key} />
+              <p className="font-semibold">{item.label}</p>
+              <p>{item.content}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <Contact />
