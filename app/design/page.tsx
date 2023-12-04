@@ -33,41 +33,43 @@ export default function ProcessPage() {
             <span className="text-primary">CHI TIẾT</span> QUY TRÌNH
           </h1>
 
-          <ProcessDetail
-            title="GẶP GỠ VÀ TƯ VẤN"
-            desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            image="/images/minthome-1.jpg"
-            moreUrl="/"
-            index={1}
-          />
-          <ProcessDetail
-            title="KÝ HỢP ĐỒNG THIẾT KẾ"
-            desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            image="/images/minthome-1.jpg"
-            moreUrl="/"
-            index={2}
-          />
-          <ProcessDetail
-            title="LÊN Ý TƯỞNG THIẾT KẾ"
-            desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            image="/images/minthome-1.jpg"
-            moreUrl="/"
-            index={3}
-          />
-          <ProcessDetail
-            title="TRÌNH BÀY PHỐI CẢNH 3D"
-            desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            image="/images/minthome-1.jpg"
-            moreUrl="/"
-            index={4}
-          />
-          <ProcessDetail
-            title="BÀN GIAO HỒ SƠ THIẾT KẾ"
-            desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            image="/images/minthome-1.jpg"
-            moreUrl="/"
-            index={5}
-          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-20">
+            <ProcessDetail
+              title="GẶP GỠ VÀ TƯ VẤN"
+              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              image="/images/minthome-1.jpg"
+              moreUrl="/"
+              index={1}
+            />
+            <ProcessDetail
+              title="KÝ HỢP ĐỒNG THIẾT KẾ"
+              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              image="/images/minthome-1.jpg"
+              moreUrl="/"
+              index={2}
+            />
+            <ProcessDetail
+              title="LÊN Ý TƯỞNG THIẾT KẾ"
+              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              image="/images/minthome-1.jpg"
+              moreUrl="/"
+              index={3}
+            />
+            <ProcessDetail
+              title="TRÌNH BÀY PHỐI CẢNH 3D"
+              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              image="/images/minthome-1.jpg"
+              moreUrl="/"
+              index={4}
+            />
+            <ProcessDetail
+              title="BÀN GIAO HỒ SƠ THIẾT KẾ"
+              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              image="/images/minthome-1.jpg"
+              moreUrl="/"
+              index={5}
+            />
+          </div>
         </div>
       </div>
       <Contact />

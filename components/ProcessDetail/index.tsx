@@ -35,7 +35,7 @@ const ProcessDetail = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 items-center">
         <div className="relative">
           {index !== undefined && (
             <p className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 -translate-y-1/3 text-5xl text-accent">

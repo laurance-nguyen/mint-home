@@ -9,7 +9,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ image, onClick, children }: ProjectCardProps) => {
   return (
-    <div className="relative h-[746px] w-full" onClick={onClick}>
+    <div className="relative h-[746px] w-full hover:scale-105 hover:z-10 transition-transform" onClick={onClick}>
       <Image
         className="w-full h-full object-cover object-[70%]"
         src={image}
