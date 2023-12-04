@@ -13,7 +13,7 @@ export default function ProjectPage() {
   return (
     <main className="flex flex-col">
       <BackdropTitle title="DỰ ÁN" />
-      <div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4">
         {PROJECT_ITEMS.map((item) => (
           <ProjectCard
             key={item.key}
