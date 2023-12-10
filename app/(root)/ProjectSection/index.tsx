@@ -1,11 +1,10 @@
-import Image from "next/image";
 import React from "react";
 
 import ProjectCard from "@/components/ProjectCard";
 
 const ProjectSection = () => {
   return (
-    <div className="flex flex-col">
+    <div className="relative flex flex-col">
       <h1 className="py-14 text-center text-2xl">
         <span className="text-primary">DỰ ÁN</span> CỦA CHÚNG TÔI
       </h1>
@@ -19,6 +18,10 @@ const ProjectSection = () => {
           <h1 className="text-4xl font-bold">MINT HOUSE</h1>
         </ProjectCard>
       </div>
+
+      <p className="absolute top-20 -z-10 text-8xl font-bold text-gray-100 text-opacity-80 sm:right-0 sm:-translate-x-1/4">
+        projects
+      </p>
     </div>
   );
 };
