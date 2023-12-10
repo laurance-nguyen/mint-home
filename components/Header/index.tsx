@@ -53,7 +53,7 @@ const Header = () => {
               key={item.key}
               className={clsx(
                 "text-sm font-medium uppercase",
-                pathname === item.pathname &&
+                pathname.split("/")[1] === item.pathname.split("/")[1] &&
                   "border-b-2 border-primary font-semibold text-primary",
               )}
             >
@@ -69,7 +69,7 @@ const Header = () => {
           <Link href="https://www.instagram.com/">
             <InstagramIcon />
           </Link>
-          <Link href="https://www.facebook.com/">
+          <Link href="https://www.facebook.com/people/Minthome/61552408651579/">
             <FacebookIcon />
           </Link>
         </div>

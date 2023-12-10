@@ -13,11 +13,14 @@ const CustomerSection = () => {
         </div>
       </div>
 
-      <h1 className="text-center text-2xl">
+      <h1 className="relative text-center text-2xl">
         <span className="text-primary">KHÁCH HÀNG</span> CỦA CHÚNG TÔI
+        <p className="absolute top-0 sm:left-1/4 sm:-translate-x-1/2 -translate-y-1/2 -z-10 text-8xl font-bold text-gray-100 text-opacity-80">
+          clients
+        </p>
       </h1>
 
-      <div className="grid grid-cols-[128px_128px] sm:grid-cols-[128px_128px_128px] justify-evenly gap-y-8">
+      <div className="grid grid-cols-[128px_128px] justify-evenly gap-y-8 sm:grid-cols-[128px_128px_128px]">
         {Array.from(Array(6)).map((_, idx) => (
           <div key={idx} className="h-11 bg-slate-300 " />
         ))}

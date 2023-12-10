@@ -65,7 +65,7 @@ export const PROJECT_ITEMS = [
   },
   {
     key: "mint-home-2",
-    label: "MINT HOUSE",
+    label: "MINT HOUSE 2",
     location: "Hồ Chí Minh",
     images: [
       "/images/minthome-layout.jpg",
@@ -125,7 +125,7 @@ export const PROJECT_ITEMS = [
   },
   {
     key: "mountain-house",
-    label: "MOUNTAIN HOUSE",
+    label: "MOUNT HOUSE",
     location: "Sapa",
     images: [
       "/images/minthome-layout.jpg",

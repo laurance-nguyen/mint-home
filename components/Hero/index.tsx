@@ -1,41 +1,78 @@
 "use client";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, DividerHorizontalIcon } from "@radix-ui/react-icons";
+import clsx from "clsx";
 import Image from "next/image";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { Fragment, useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+
+import { PROJECT_ITEMS } from "@/lib/constants";
 
 import { Button } from "../ui/button";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+  const router = useRouter();
+
   return (
-    <AutoPlaySwipeableViews autoPlay enableMouseEvents>
-      {Array.from(Array(3)).map((_, i) => (
-        <div key={i} className="relative h-[746px] w-full sm:h-auto">
-          <Image
-            className="h-full w-full object-cover object-[70%]"
-            src={`/images/minthome-1${5 - i}.jpg`}
-            height={720}
-            width={1280}
-            alt="img"
-          />
-          <div className="absolute left-0 top-0 flex h-full w-full flex-col justify-center gap-6 bg-black bg-opacity-50 px-6 text-white">
-            <h1 className="text-4xl font-bold">CONCERT HALL IN VIET NAM</h1>
-            <p>
-              Concert Hall is the architecture of a new generation, a building
-              that exists not only in the dimension of space, but also in the
-              dimension of time and communication.
-            </p>
-            <Button className="w-fit">
-              Tìm hiểu thêm &nbsp;
-              <ArrowRightIcon />
-            </Button>
+    <div
+      onMouseEnter={() => setIsAutoplay(false)}
+      onMouseLeave={() => setIsAutoplay(true)}
+      className="relative"
+    >
+      <AutoPlaySwipeableViews
+        autoplay={isAutoplay}
+        enableMouseEvents
+        onChangeIndex={setIndex}
+        index={index}
+      >
+        {PROJECT_ITEMS.map(({ key, label, desc, images }, i) => (
+          <div key={key} className="relative h-[746px] w-full sm:h-auto">
+            <Image
+              className="h-full w-full object-cover object-[70%]"
+              src={images[1]}
+              height={720}
+              width={1280}
+              alt="img"
+            />
+            <div className="absolute left-0 top-0 flex h-full w-full flex-col justify-center gap-6 bg-black bg-opacity-50 px-6 text-white">
+              <h1 className="text-4xl font-bold">{label}</h1>
+              <p>{desc}</p>
+              <Button
+                className="w-fit"
+                onClick={() => {
+                  router.push(`/project/${key}`);
+                }}
+              >
+                Tìm hiểu thêm &nbsp;
+                <ArrowRightIcon />
+              </Button>
+            </div>
           </div>
-        </div>
-      ))}
-    </AutoPlaySwipeableViews>
+        ))}
+      </AutoPlaySwipeableViews>
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 text-white">
+        {Array.from(Array(PROJECT_ITEMS.length)).map((_, i) => (
+          <Fragment key={i}>
+            <Button
+              variant="link"
+              onClick={() => {
+                setIndex(i);
+              }}
+              className={clsx(
+                i === index && "text-2xl",
+                "text-white transition-all",
+              )}
+            >{`0${i + 1}`}</Button>
+            {i !== PROJECT_ITEMS.length - 1 && <DividerHorizontalIcon />}
+          </Fragment>
+        ))}
+      </div>
+    </div>
   );
 };
 

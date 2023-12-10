@@ -16,8 +16,7 @@ export default function ContactPage() {
             ĐIỆN THOẠI
           </div>
           <div className="flex flex-col gap-2 pl-6">
-            <p>+84 369 369 369</p>
-            <p>+84 369 369 369</p>
+            <p>0906326466</p>
           </div>
         </div>
         <div className="flex flex-col gap-5 text-white">
@@ -25,7 +24,7 @@ export default function ContactPage() {
             <MailIcon size={18} />
             EMAIL
           </div>
-          <p className="pl-6">info@minthome.com</p>
+          <p className="pl-6">info@minthome.vn</p>
         </div>
         <div className="flex flex-col gap-5 text-white">
           <div className="flex gap-2 text-sm font-semibold">
@@ -33,7 +32,7 @@ export default function ContactPage() {
             ĐỊA CHỈ
           </div>
           <p className="pl-6">
-            Hà Huy Giáp, Thạnh Lộc, Quận 12, Thạnh phố Hồ Chí Minh
+            Nguyễn Hữu Cảnh, Quận Bình Thạnh, Thành phố Hồ Chí Minh
           </p>
         </div>
 

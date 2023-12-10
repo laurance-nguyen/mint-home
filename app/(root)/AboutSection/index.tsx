@@ -5,7 +5,7 @@ import { SPECIALIZATION_ITEMS } from "@/lib/constants";
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col px-6">
+    <div className="relative flex flex-col px-6">
       <h1 className="py-14 text-center text-2xl">
         GIỚI THIỆU VỀ <span className="text-primary">MINT HOME</span>
       </h1>
@@ -49,13 +49,17 @@ const AboutSection = () => {
         </div>
 
         <Image
-          className=":w-2/3 aspect-square object-cover sm:aspect-auto sm:w-1/2"
+          className="aspect-square object-cover sm:aspect-auto sm:w-1/2"
           src="/images/minthome-14.jpg"
           alt="kitchen"
           width={1280}
           height={720}
         />
       </div>
+
+      <p className="absolute top-24 -z-10 text-8xl font-bold text-gray-100 text-opacity-80">
+        about
+      </p>
     </div>
   );
 };
