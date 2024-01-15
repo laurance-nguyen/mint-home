@@ -39,8 +39,8 @@ dependencies:
     specifier: ^10.2.1
     version: 10.2.1
   pocketbase:
-    specifier: ^0.19.0
-    version: 0.19.0
+    specifier: ^0.20.3
+    version: 0.20.3
   react:
     specifier: ^18
     version: 18.2.0
@@ -2690,8 +2690,8 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  /pocketbase@0.19.0:
-    resolution: {integrity: sha512-bUVZfVdD17K8GnwbeDMZPEdREVg2YE0F8uHPDC0zer4VtwXUqoPCCeudTy3fhUE7pfuKnfpuPxeBSYsBY3AGIQ==}
+  /pocketbase@0.20.3:
+    resolution: {integrity: sha512-qembHhE7HumDBZpxWgFIbhJPeaCoUIdwhW59xF/VlMR79pDTYz/LaQ4q89y7GczKo4X9actFgFN8hs4dTl0spQ==}
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.31):
