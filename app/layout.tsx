@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import BlurryDivider from "@/components/BlurryDivider";
 import Header from "@/components/Header";
-import { pb } from "@/lib/utils";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
