@@ -21,15 +21,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  try {
-    await pb.admins.authWithPassword(
-      process.env.POCKETBASE_ADMIN_USERNAME ?? "",
-      process.env.POCKETBASE_ADMIN_PASSWORD ?? "",
-    );
-  } catch (error) {
-    // console.log({ error });
-  }
-
   return (
     <html lang="en">
       <body className={montserrat.className}>

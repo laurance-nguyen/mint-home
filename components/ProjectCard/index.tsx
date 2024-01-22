@@ -1,16 +1,25 @@
+"use client";
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 type ProjectCardProps = {
+  id: string;
   image: string;
   onClick?: () => void;
   children?: React.ReactNode;
 };
 
-const ProjectCard = ({ image, onClick, children }: ProjectCardProps) => {
+const ProjectCard = ({ id, image, onClick, children }: ProjectCardProps) => {
+  const router = useRouter();
+
+  const handleOnClick = () => {
+    onClick?.();
+    router.push(`/project/${id}`);
+  };
   return (
-    <div className="relative h-[746px] w-full" onClick={onClick}>
+    <div className="relative h-[746px] w-full" onClick={handleOnClick}>
       <Image
         className="h-full w-full object-cover object-[70%]"
         src={image}

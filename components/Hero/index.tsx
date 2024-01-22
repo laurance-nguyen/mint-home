@@ -7,13 +7,15 @@ import React, { Fragment, useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
-import { PROJECT_ITEMS } from "@/lib/constants";
-
 import { Button } from "../ui/button";
+
+type Props = {
+  projects: ProjectType[];
+};
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const Hero = () => {
+const Hero = ({ projects }: Props) => {
   const [index, setIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
   const router = useRouter();
@@ -30,11 +32,11 @@ const Hero = () => {
         onChangeIndex={setIndex}
         index={index}
       >
-        {PROJECT_ITEMS.map(({ key, label, desc, images }, i) => (
-          <div key={key} className="relative h-[746px] w-full sm:h-auto">
+        {projects.map(({ id, label, desc, images }, i) => (
+          <div key={id} className="relative h-[746px] w-full sm:h-auto">
             <Image
               className="h-full w-full object-cover object-[70%]"
-              src={images[1]}
+              src={images[0]}
               height={720}
               width={1280}
               alt="img"
@@ -45,7 +47,7 @@ const Hero = () => {
               <Button
                 className="w-fit"
                 onClick={() => {
-                  router.push(`/project/${key}`);
+                  router.push(`/project/${id}`);
                 }}
               >
                 Tìm hiểu thêm &nbsp;
@@ -56,7 +58,7 @@ const Hero = () => {
         ))}
       </AutoPlaySwipeableViews>
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 text-white">
-        {Array.from(Array(PROJECT_ITEMS.length)).map((_, i) => (
+        {Array.from(Array(projects.length)).map((_, i) => (
           <Fragment key={i}>
             <Button
               variant="link"
@@ -68,7 +70,7 @@ const Hero = () => {
                 "text-white transition-all",
               )}
             >{`0${i + 1}`}</Button>
-            {i !== PROJECT_ITEMS.length - 1 && <DividerHorizontalIcon />}
+            {i !== projects.length - 1 && <DividerHorizontalIcon />}
           </Fragment>
         ))}
       </div>
