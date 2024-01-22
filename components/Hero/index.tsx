@@ -10,7 +10,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 import { Button } from "../ui/button";
 
 type Props = {
-  projects: ProjectType[];
+  projects?: ProjectType[];
 };
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -33,7 +33,7 @@ const Hero = ({ projects }: Props) => {
         onChangeIndex={setIndex}
         index={index}
       >
-        {projects.map(({ id, label, desc, images }, i) => (
+        {projects?.map(({ id, label, desc, images }, i) => (
           <div key={id} className="relative h-[746px] w-full sm:h-auto">
             <Image
               className="h-full w-full object-cover object-[70%]"
@@ -59,7 +59,7 @@ const Hero = ({ projects }: Props) => {
         ))}
       </AutoPlaySwipeableViews>
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 text-white">
-        {Array.from(Array(projects.length)).map((_, i) => (
+        {Array.from(Array(projects?.length ?? 0)).map((_, i) => (
           <Fragment key={i}>
             <Button
               variant="link"
@@ -71,7 +71,7 @@ const Hero = ({ projects }: Props) => {
                 "text-white transition-all",
               )}
             >{`0${i + 1}`}</Button>
-            {i !== projects.length - 1 && <DividerHorizontalIcon />}
+            {i !== (projects?.length ?? 0) - 1 && <DividerHorizontalIcon />}
           </Fragment>
         ))}
       </div>
