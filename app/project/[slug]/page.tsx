@@ -18,10 +18,11 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
       .collection("projects")
       .getOne<ProjectType>(params.slug);
 
-    projectInfo.images = projectInfo.images.map(
-      (image) =>
-        `https://${process.env.POCKETBASE_DOMAIN}/api/files/projects/${params.slug}/${image}`,
-    );
+    if (projectInfo !== undefined)
+      projectInfo.images = projectInfo.images.map(
+        (image) =>
+          `https://${process.env.POCKETBASE_DOMAIN}/api/files/projects/${params.slug}/${image}`,
+      );
   } catch (error) {}
 
   return (

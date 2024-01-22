@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 type ProjectCardProps = {
-  id: string;
+  id?: string;
   image: string;
   onClick?: () => void;
   children?: React.ReactNode;
@@ -16,7 +16,7 @@ const ProjectCard = ({ id, image, onClick, children }: ProjectCardProps) => {
 
   const handleOnClick = () => {
     onClick?.();
-    router.push(`/project/${id}`);
+    if (id) router.push(`/project/${id}`);
   };
   return (
     <div className="relative h-[746px] w-full" onClick={handleOnClick}>
