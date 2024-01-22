@@ -7,7 +7,7 @@ import CustomerSection from "./CustomerSection";
 import ProjectSection from "./ProjectSection";
 
 export default async function Home() {
-  let highlightProjects: ProjectType[] = [];
+  let highlightProjects: ProjectType[] | undefined;
   try {
     const pb = await getAdminClient();
     highlightProjects = await pb
@@ -17,7 +17,7 @@ export default async function Home() {
         filter: "isHighlight=True",
       });
 
-    highlightProjects.forEach((project) => {
+    highlightProjects?.forEach((project) => {
       project.images = project.images.map(
         (image) =>
           `https://${process.env.POCKETBASE_DOMAIN}/api/files/projects/${project.id}/${image}`,
