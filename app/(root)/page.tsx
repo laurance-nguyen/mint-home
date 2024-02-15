@@ -6,10 +6,12 @@ import AboutSection from "./AboutSection";
 import CustomerSection from "./CustomerSection";
 import ProjectSection from "./ProjectSection";
 
+//* This just a tricky fix to address the Pocketbase issue that with concurrentcy requests, it may cause our admin to lose the credentials
+let highlightProjects: ProjectType[] | undefined;
+
 export default async function Home() {
-  let highlightProjects: ProjectType[] | undefined;
+  const pb = await getAdminClient();
   try {
-    const pb = await getAdminClient();
     highlightProjects = await pb
       .collection("projects")
       .getFullList<ProjectType>({
@@ -24,7 +26,7 @@ export default async function Home() {
       );
     });
   } catch (error) {
-    // console.log({ error });
+    console.log({ error });
   }
 
   return (

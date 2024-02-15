@@ -16,7 +16,6 @@ type Props = {
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Hero = ({ projects }: Props) => {
-  console.log({ projects });
   const [index, setIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
   const router = useRouter();
