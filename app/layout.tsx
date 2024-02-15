@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import BlurryDivider from "@/components/BlurryDivider";
 import Header from "@/components/Header";
-import { pb } from "@/lib/utils";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,20 +15,11 @@ export const metadata: Metadata = {
   description: "Passion in home decor",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  try {
-    await pb.admins.authWithPassword(
-      process.env.POCKETBASE_ADMIN_USERNAME ?? "",
-      process.env.POCKETBASE_ADMIN_PASSWORD ?? "",
-    );
-  } catch (error) {
-    // console.log({ error });
-  }
-
   return (
     <html lang="en">
       <body className={montserrat.className}>

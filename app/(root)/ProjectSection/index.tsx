@@ -2,6 +2,7 @@ import React from "react";
 
 import ProjectCard from "@/components/ProjectCard";
 
+//TODO: Fix the ProjectCard in this component
 const ProjectSection = () => {
   return (
     <div className="relative flex flex-col">
