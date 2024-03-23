@@ -79,5 +79,3 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
     </main>
   );
 }
-
-export const revalidate = 1;
