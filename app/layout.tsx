@@ -3,7 +3,6 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import Image from "next/image";
 
 import BlurryDivider from "@/components/BlurryDivider";
 import Header from "@/components/Header";
@@ -28,7 +27,7 @@ export default function RootLayout({
 
         <BlurryDivider />
         <p className="py-4 text-center text-xs text-accent-foreground">
-          ©minthome 2023. All Rights Reserved
+          {`©minthome ${new Date().getFullYear()}. All Rights Reserved`}
         </p>
 
         <Analytics />

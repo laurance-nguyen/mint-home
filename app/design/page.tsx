@@ -4,6 +4,7 @@ import BackdropTitle from "@/components/BackdropTitle";
 import Contact from "@/components/ContactForm";
 import NumberIndent from "@/components/NumberIndent";
 import ProcessDetail from "@/components/ProcessDetail";
+import { DESIGN_PROCESSES } from "@/lib/constants";
 
 export default function ProcessPage() {
   return (
@@ -11,20 +12,18 @@ export default function ProcessPage() {
       <BackdropTitle title="QUY TRÌNH THIẾT KẾ NỘI THẤT" />
       <div className="flex flex-col p-6">
         <div className="flex flex-col gap-8">
-          <h1 className="text-3xl font-medium">
+          {/* <h1 className="text-3xl font-medium">
             Advice for stirring your online community and fostering engagement
-          </h1>
-          <p>
+          </h1> */}
+          {/* <p>
             When you enter into any new area of science, you almost always find
             yourself with a baffling new language of technical terms to learn
             before you can converse with the experts.
-          </p>
+          </p> */}
           <div className="grid grid-cols-2 gap-x-3 gap-y-6">
-            <NumberIndent order={1} content="GẶP GỠ VÀ TƯ VẤN" />
-            <NumberIndent order={2} content="KÝ HỢP ĐỒNG THIẾT KẾ" />
-            <NumberIndent order={3} content="LÊN Ý TƯỞNG THIẾT KẾ" />
-            <NumberIndent order={4} content="TRÌNH BÀY PHỐI CẢNH 3D" />
-            <NumberIndent order={5} content="BÀN GIAO HỒ SƠ THIẾT KẾ" />
+            {DESIGN_PROCESSES.map((item, idx) => (
+              <NumberIndent key={idx} order={idx + 1} content={item.title} />
+            ))}
           </div>
         </div>
 
@@ -33,42 +32,16 @@ export default function ProcessPage() {
             <span className="text-primary">CHI TIẾT</span> QUY TRÌNH
           </h1>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-20">
-            <ProcessDetail
-              title="GẶP GỠ VÀ TƯ VẤN"
-              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              image="/images/minthome-1.jpg"
-              moreUrl="/"
-              index={1}
-            />
-            <ProcessDetail
-              title="KÝ HỢP ĐỒNG THIẾT KẾ"
-              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              image="/images/minthome-1.jpg"
-              moreUrl="/"
-              index={2}
-            />
-            <ProcessDetail
-              title="LÊN Ý TƯỞNG THIẾT KẾ"
-              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              image="/images/minthome-1.jpg"
-              moreUrl="/"
-              index={3}
-            />
-            <ProcessDetail
-              title="TRÌNH BÀY PHỐI CẢNH 3D"
-              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              image="/images/minthome-1.jpg"
-              moreUrl="/"
-              index={4}
-            />
-            <ProcessDetail
-              title="BÀN GIAO HỒ SƠ THIẾT KẾ"
-              desc="Lorem ipsum dolor sit amet, consectetur adipist pricing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              image="/images/minthome-1.jpg"
-              moreUrl="/"
-              index={5}
-            />
+          <div className="flex flex-col gap-8">
+            {DESIGN_PROCESSES.map((item, idx) => (
+              <ProcessDetail
+                key={idx}
+                title={item.title}
+                desc={item.desc}
+                image={item.image}
+                index={idx + 1}
+              />
+            ))}
           </div>
         </div>
       </div>

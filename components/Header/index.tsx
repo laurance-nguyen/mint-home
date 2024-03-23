@@ -9,13 +9,13 @@ import React from "react";
 
 import { MENU_ITEMS } from "@/lib/constants";
 
-import TikTokIcon from "../TikTokIcon";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import TikTokIcon from "./TikTokIcon";
 
 const Header = () => {
   const router = useRouter();
@@ -37,12 +37,23 @@ const Header = () => {
               onSelect={() => {
                 router.push(item.pathname);
               }}
-              className={clsx(pathname === item.pathname && "bg-accent")}
+              className={clsx("text-lg py-2",pathname === item.pathname && "bg-accent")}
               key={item.key}
             >
               {item.label}
             </DropdownMenuItem>
           ))}
+          <div className="flex justify-center gap-12 mt-4 mb-2">
+            <Link href="https://www.facebook.com/people/Minthome/61552408651579/">
+              <FacebookIcon />
+            </Link>
+            <Link href="https://www.tiktok.com/">
+              <TikTokIcon />
+            </Link>
+            <Link href="https://www.instagram.com/">
+              <InstagramIcon />
+            </Link>
+          </div>
         </DropdownMenuContent>
       </DropdownMenu>
 
@@ -63,14 +74,14 @@ const Header = () => {
         </ul>
 
         <div className="flex items-center gap-4">
+          <Link href="https://www.facebook.com/people/Minthome/61552408651579/">
+            <FacebookIcon />
+          </Link>
           <Link href="https://www.tiktok.com/">
             <TikTokIcon />
           </Link>
           <Link href="https://www.instagram.com/">
             <InstagramIcon />
-          </Link>
-          <Link href="https://www.facebook.com/people/Minthome/61552408651579/">
-            <FacebookIcon />
           </Link>
         </div>
       </nav>
