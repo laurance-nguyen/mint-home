@@ -17,13 +17,26 @@ const AboutSection = () => {
               we turn ideas into works of art.
             </h2>
             <p className="text-sm">
-              For each project we establish relationships with partners who we
-              know will help us create added value for your project. As well as
-              bringing together the public and private sectors, we make
-              sector-overarching links to gather knowledge and to learn from
-              each other. The way we undertake projects is based on permanently
-              applying values that reinforce each other: socio-cultural value,
-              experiential value, building-technical value and economical value.
+              <strong>Minthome</strong> - Không đơn thuần là dịch vụ thiết kế và
+              thi công nội thất. Đồng hành cùng gia chủ tạo nên không gian ấm áp
+              và gần gũi với thiên nhiên, khơi dậy năng lượng tươi mới mỗi ngày
+            </p>
+            <p className="text-sm">
+              Căn hộ, nhà phố, villa, hotel, resort, hay cửa hàng - Minthome
+              không giới hạn.
+            </p>
+
+            <p className="text-sm">
+              Mỗi không gian được Minthome chạm khắc đều là một tác phẩm nghệ
+              thuật sống. Việc tận dụng sự hiểu biết sâu rộng về vật liệu, không
+              gian và xu hướng thị trường giúp Minthome tạo ra không gian không
+              chỉ đáng sống mà còn đáng đầu tư.
+            </p>
+
+            <p className="text-sm">
+              Hãy để Minthome biến những ý tưởng thành hiện thực, từ việc thiết
+              kế đến triển khai, từ việc không gian sống đến việc tăng giá trị
+              tài sản mang đậm chất cá nhân hoá trên từng ngôi nhà
             </p>
           </div>
 

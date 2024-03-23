@@ -33,7 +33,11 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
           className="mt-8 flex flex-col gap-6 rounded border p-6"
         >
           <h1 className="text-3xl font-bold">{projectInfo?.label}</h1>
-          <p>{projectInfo?.desc}</p>
+
+          {projectInfo?.desc
+            .split("\r\n")
+            .map((paragraph, idx) => <p key={idx}>{paragraph}</p>)}
+
           <div className="flex gap-4 leading-loose">
             <div id="info-title" className="w-fit font-semibold">
               NGÀY THI CÔNG:
@@ -75,3 +79,5 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
     </main>
   );
 }
+
+export const revalidate = 1;
