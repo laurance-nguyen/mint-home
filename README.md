@@ -26,3 +26,4 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - [ ] Favicon for the site
 - [ ] Key value CMS for the content
 - [ ] Update the content for the missing points
+- [ ] Improve Accessibility score

@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 
 import BlurryDivider from "@/components/BlurryDivider";
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
         <p className="py-4 text-center text-xs text-accent-foreground">
           {`©minthome ${new Date().getFullYear()}. All Rights Reserved`}
         </p>
-
+        <Toaster />
         <Analytics />
       </body>
     </html>

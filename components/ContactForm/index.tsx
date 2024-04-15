@@ -16,17 +16,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
-);
-
-const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  phone: z.string().regex(phoneRegex, "Số điện thoại không hợp lệ"),
-  email: z.string().email(),
-  company: z.string().min(2).max(50),
-  message: z.string().min(2).max(500),
-});
+import { ToastAction } from "../ui/toast";
+import { useToast } from "../ui/use-toast";
+import { submitForm } from "./actions";
+import { formSchema } from "./schema";
 
 const Contact = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -39,9 +32,30 @@ const Contact = () => {
       message: "",
     },
   });
+  const { toast } = useToast();
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const response = await submitForm(data);
+
+    toast(
+      response.success
+        ? {
+            title: "Gửi thành công",
+          }
+        : {
+            title: "Gửi thất bại",
+            description: "Vui lòng thử lại.",
+            variant: "destructive",
+            action: (
+              <ToastAction
+                altText="Thử lại"
+                onClick={form.handleSubmit(onSubmit)}
+              >
+                Thử lại
+              </ToastAction>
+            ),
+          },
+    );
   };
 
   return (
@@ -119,7 +133,11 @@ const Contact = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="float-right">
+          <Button
+            isLoading={form.formState.isSubmitting}
+            type="submit"
+            className="float-right"
+          >
             Gửi&nbsp;
             <ArrowRightIcon />
           </Button>
